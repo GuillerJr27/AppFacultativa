@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCuentaUSuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCuentaUSuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCuentaUSuarioResult" type="tns:ArrayOfCuentaUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCuentaUsuario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CuentaUsuario" nillable="true" type="tns:CuentaUsuario" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CuentaUsuario">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCuenta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Moneda" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceInicial" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceActual" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tags" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UsuarioExtraInfoId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DetalleCuenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalleCuentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalleCuentaResult" type="tns:CuentaUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cta" type="tns:CuentaUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CuentaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CuentaUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarCuentaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cta" type="tns:CuentaUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarCuentaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarCuentaUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCuentaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCuentaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarCuentaUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCuentaUSuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCuentaUSuario" />
+  </wsdl:message>
+  <wsdl:message name="GetCuentaUSuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCuentaUSuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetalleCuentaSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalleCuenta" />
+  </wsdl:message>
+  <wsdl:message name="DetalleCuentaSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalleCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CuentaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:CuentaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="CuentaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:CuentaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCuentaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarCuentaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCuentaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarCuentaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCuentaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarCuentaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCuentaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarCuentaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MovimientoCuentaSoap">
+    <wsdl:operation name="GetCuentaUSuario">
+      <wsdl:input message="tns:GetCuentaUSuarioSoapIn" />
+      <wsdl:output message="tns:GetCuentaUSuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleCuenta">
+      <wsdl:input message="tns:DetalleCuentaSoapIn" />
+      <wsdl:output message="tns:DetalleCuentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CuentaUsuario">
+      <wsdl:input message="tns:CuentaUsuarioSoapIn" />
+      <wsdl:output message="tns:CuentaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCuentaUsuario">
+      <wsdl:input message="tns:ModificarCuentaUsuarioSoapIn" />
+      <wsdl:output message="tns:ModificarCuentaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCuentaUsuario">
+      <wsdl:input message="tns:EliminarCuentaUsuarioSoapIn" />
+      <wsdl:output message="tns:EliminarCuentaUsuarioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MovimientoCuentaSoap" type="tns:MovimientoCuentaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCuentaUSuario">
+      <soap:operation soapAction="http://tempuri.org/GetCuentaUSuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleCuenta">
+      <soap:operation soapAction="http://tempuri.org/DetalleCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaUsuario">
+      <soap:operation soapAction="http://tempuri.org/CuentaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCuentaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ModificarCuentaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCuentaUsuario">
+      <soap:operation soapAction="http://tempuri.org/EliminarCuentaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MovimientoCuentaSoap12" type="tns:MovimientoCuentaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCuentaUSuario">
+      <soap12:operation soapAction="http://tempuri.org/GetCuentaUSuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleCuenta">
+      <soap12:operation soapAction="http://tempuri.org/DetalleCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CuentaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/CuentaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCuentaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ModificarCuentaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCuentaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/EliminarCuentaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MovimientoCuenta">
+    <wsdl:port name="MovimientoCuentaSoap" binding="tns:MovimientoCuentaSoap">
+      <soap:address location="https://localhost:44354/Servicios/MovimientoCuenta.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MovimientoCuentaSoap12" binding="tns:MovimientoCuentaSoap12">
+      <soap12:address location="https://localhost:44354/Servicios/MovimientoCuenta.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

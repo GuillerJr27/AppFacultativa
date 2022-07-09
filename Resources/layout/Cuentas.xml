@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:p4="http://xamarin.com/mono/android/designer"
+    android:orientation="vertical"
+    android:padding="10.0dp"
+    android:background="@color/background4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="88.5dp"
+        android:id="@+id/textView4" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableRow1">
+        <ImageView
+            android:contentDescription=""
+            android:layout_width="37.0dp"
+            android:layout_height="30.5dp"
+            android:src="@drawable/admincuenta"
+            android:id="@+id/imageView1" />
+        <TextView
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="@string/textView15"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="246.0dp"
+            android:layout_height="33.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:textColor="#000000"
+            android:id="@+id/textView3"
+            android:layout_marginLeft="15.5dp" />
+    </TableRow>
+    <ImageView
+        android:src="@drawable/login"
+        android:layout_width="match_parent"
+        android:layout_height="163.5dp"
+        android:contentDescription=""
+        android:id="@+id/imageView2"/>
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout1">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableRow1">
+                <ImageView
+                    android:contentDescription=""
+                    android:layout_width="37.0dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/nombrecuenta"
+                    android:id="@+id/imageView1" />
+                <EditText
+                    android:hint="@string/textView16"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:layout_width="300.0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editNombreCuenta" />
+            </TableRow>
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/txtMensajeNombreCuenta" />
+            <TableRow
+                android:layout_width="287.0dp"
+                android:layout_height="63.5dp"
+                android:id="@+id/tableRow2">
+                <ImageView
+                    android:layout_width="37.0dp"
+                    android:layout_height="40dp"
+                    android:contentDescription=""
+                    android:src="@drawable/tarjetas"
+                    android:id="@+id/imageView6" />
+                <Spinner
+                    android:id="@+id/spinercuenta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40.0dp"
+                    android:layout_marginRight="50.0dp" />
+            </TableRow>
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/txtMensajeApellido" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="63.5dp"
+                android:id="@+id/tableRow4">
+
+                <ImageView
+                    android:layout_width="37.0dp"
+                    android:layout_height="40dp"
+                    android:contentDescription=""
+                    android:src="@drawable/moneda"
+                    android:id="@+id/imageView3" />
+                <Spinner
+                    android:id="@+id/spinnermoneda"
+                    android:text="@string/textView20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dp"
+                    android:prompt="@string/planet_prompt"/>
+
+            </TableRow>
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/txtMensajeUsuarioApodo" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="63.5dp"
+                android:id="@+id/tableRow5">
+
+                <ImageView
+                    android:layout_width="37.0dp"
+                    android:layout_height="40dp"
+                    android:contentDescription=""
+                    android:src="@drawable/monto"
+                    android:id="@+id/imageView4" />
+
+                <EditText
+                    android:hint="@string/textView19"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:layout_width="300.0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/editMonto" />
+            </TableRow>
+
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/textMensajeMonto" />
+            <Button
+                android:layout_gravity="center"
+                android:background="@color/background4"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnGuardarCuenta"
+                android:id="@+id/btnGuardarCuenta" />
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/textView6" />
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/textView7" />
+            <Button
+                android:layout_gravity="center"
+                android:background="@color/background4"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnCancelar"
+                android:id="@+id/btnCancelar" />
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/textView8" />
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/textView9" />
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
