@@ -19,7 +19,7 @@
         android:id="@+id/textView3" />
 
     <TextView
-        android:text="@string/textView38"
+        android:text="@string/textView35"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"

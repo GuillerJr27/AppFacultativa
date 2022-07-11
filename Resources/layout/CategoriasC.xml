@@ -65,24 +65,6 @@
                 android:id="@+id/imageView" />
 
         </TableRow>
-        <TextView
-                android:textSize="18dp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView3"
-                android:layout_height="wrap_content"
-                android:layout_width="71.5dp" />
-        <TextView
-                android:textSize="18dp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView5"
-                android:layout_height="wrap_content"
-                android:layout_width="71.5dp" />
         <TableRow
             android:gravity="center"
             android:layout_width="match_parent"
@@ -91,9 +73,7 @@
 
             <Button
                 android:text="@string/btnGasto"
-                android:id="@+id/btnGasto"
-                android:background="@color/background8"
-                android:textColor="@android:color/black"
+                android:id="@+id/button1"
                 android:layout_width="91.5dp"
                 android:layout_height="49.5dp" />
 
@@ -108,31 +88,12 @@
                 android:layout_width="71.5dp" />
             <Button
                 android:text="@string/btnIngreso"
-                android:id="@+id/btnIngreso"
-                android:background="@color/background8"
-                android:textColor="@android:color/black"
+                android:id="@android:id/button2"
                 android:layout_width="99.0dp"
                 android:layout_height="49.5dp" />
 
+
         </TableRow>
 
-        <TextView
-                android:textSize="18dp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView4"
-                android:layout_height="wrap_content"
-                android:layout_width="71.5dp" />
-        <TextView
-                android:textSize="18dp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView6"
-                android:layout_height="wrap_content"
-                android:layout_width="71.5dp" />
     </TableLayout>
 </LinearLayout>

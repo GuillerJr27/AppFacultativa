@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10.0dp"
+    android:background="@color/background8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text=""
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView1" />
+    <TextView
+        android:text="@string/textView34"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView2" />
+    <TextView
+        android:text=""
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView3" />
+    <TextView
+        android:text=""
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView4" />
+
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout1">
+
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/txtMensaje" />
+
+            <ImageView
+                android:layout_width="37.0dp"
+                android:layout_height="40dp"
+                android:contentDescription=""
+                android:src="@drawable/gasto"
+                android:id="@+id/imageView4" />
+
+            <Button
+                android:layout_gravity="center"
+                android:background="@color/background4"
+                android:textColor="@android:color/black"
+                android:text="@string/btnGasto"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dp"
+                android:id="@+id/btnGasto" />
+
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/txtMensaje3" />
+
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/txtMensaje1" />
+
+            <ImageView
+                android:layout_width="37.0dp"
+                android:layout_height="40dp"
+                android:contentDescription=""
+                android:src="@drawable/ingresos"
+                android:id="@+id/imageView" />
+
+            <Button
+                android:layout_gravity="center"
+                android:background="@color/background4"
+                android:textColor="@android:color/black"
+                android:text="@string/btnIngreso"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dp"
+                android:id="@+id/btnIngreso" />
+
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/txtMensaje5" />
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

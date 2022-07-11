@@ -13,5 +13,10 @@ namespace AppFacultativa
 {
     internal class ClassGlobal
     {
+        public static class Usuario
+        {
+            public static string correo;
+            public static string clave;
+        }
     }
 }

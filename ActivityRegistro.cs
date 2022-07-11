@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using AndroidX.DrawerLayout.Widget;
 using Google.Android.Material.Snackbar;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,8 @@ namespace AppFacultativa
     class ActivityRegistro : Activity
     {
         Button btnCrearNueva;
-        EditText editNombre, editApellido, editUsuarioApodo, editTelefono, editCorreo, editPass, editRepetirPass;
-        TextView txtMensaje, txtMensajeNombre, txtMensajeApellido, txtMensajeUsuarioApodo, txtMensajeTelefono, txtMensajeCorreo, txtMensajePass, txtMensajeRepetirPass;
+        EditText editCorreo, editPass, editRepetirPass;
+        //TextView txtMensaje, txtMensajeCorreo, txtMensajePass, txtMensajeRepetirPass;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -25,90 +26,61 @@ namespace AppFacultativa
             SetContentView(Resource.Layout.RegistroU);
 
             btnCrearNueva = FindViewById<Button>(Resource.Id.btnCrearNueva);
-            editNombre = FindViewById<EditText>(Resource.Id.editNombre);
-            editApellido = FindViewById<EditText>(Resource.Id.editApellido);
-            editUsuarioApodo = FindViewById<EditText>(Resource.Id.editUsuarioApodo);
-            editTelefono = FindViewById<EditText>(Resource.Id.editTelefono);
             editCorreo = FindViewById<EditText>(Resource.Id.editCorreo);
             editPass = FindViewById<EditText>(Resource.Id.editPass);
             editRepetirPass = FindViewById<EditText>(Resource.Id.editRepetirPass);
-            txtMensaje = FindViewById<TextView>(Resource.Id.txtMensaje);
-            txtMensajeNombre = FindViewById<TextView>(Resource.Id.txtMensajeNombre);
-            txtMensajeApellido = FindViewById<TextView>(Resource.Id.txtMensajeApellido);
-            txtMensajeApellido = FindViewById<TextView>(Resource.Id.txtMensajeApellido);
-            txtMensajeUsuarioApodo = FindViewById<TextView>(Resource.Id.txtMensajeUsuarioApodo);
-            txtMensajeTelefono = FindViewById<TextView>(Resource.Id.txtMensajeTelefono);
-            txtMensajeCorreo = FindViewById<TextView>(Resource.Id.txtMensajeCorreo);
-            txtMensajePass = FindViewById<TextView>(Resource.Id.txtMensajePass);
-            txtMensajeRepetirPass = FindViewById<TextView>(Resource.Id.txtMensajeRepetirPass);
+            //txtMensaje = FindViewById<TextView>(Resource.Id.txtMensaje);
+            //txtMensajeCorreo = FindViewById<TextView>(Resource.Id.txtMensajeCorreo);
+            //txtMensajePass = FindViewById<TextView>(Resource.Id.txtMensajePass);
+            //txtMensajeRepetirPass = FindViewById<TextView>(Resource.Id.txtMensajeRepetirPass);
 
             btnCrearNueva.Click += BtnCrearNueva_Click;
         }
 
         private void BtnCrearNueva_Click(object sender, EventArgs e)
         {
-            //if (editnombre.text == string.empty && editapellido.text == string.empty
-            //    && editusuarioapodo.text == string.empty && edittelefono.text == string.empty && editcorreo.text == string.empty &&
-            //    editpass.text == string.empty && editrepetirpass.text == string.empty)
-                //{
-                //    txtMensaje.Text = "LLENE TODOS LOS CAMPOS";
-
-                //}
-                //else
-                //{
-                //    if (editPass.Text == editRepetirPass.Text)
-                //    {
-                //        Intent i = new Intent(this, typeof(ActivityLogin));
-                //        StartActivity(i);
-                //        txtMensaje.Text = "CUENTA CREADA CON EXITO...";
-                //    }
-                //    else
-                //    {
-                //        txtMensaje.Text = "CONTRASEÑAS NO COINCIDEN...";
-                //    }
-                //}
-            if (editNombre.Text == String.Empty)
+            if (editCorreo.Text == String.Empty)
             {
-                txtMensajeNombre.Text = "Ingrese sus nombres";
-            }
-            else if(editApellido.Text == String.Empty)
-            {
-                txtMensajeApellido.Text = "Ingrese sus apellidos";
-            }
-            else if (editUsuarioApodo.Text == String.Empty)
-            {
-                txtMensajeUsuarioApodo.Text = "Ingrese su usuario o apodo";
-            }
-            else if (editTelefono.Text == String.Empty)
-            {
-                txtMensajeTelefono.Text = "Ingrese su número telefónico";
-            }
-            else if (editCorreo.Text == String.Empty)
-            {
-                txtMensajeCorreo.Text = "Ingrese un correo electrónico";
+                //txtMensajeCorreo.Text = "Ingrese un correo electrónico";
+                Toast.MakeText(Application.Context, "Ingrese un correo electrónico", ToastLength.Short).Show();
             }
             else if (editPass.Text == String.Empty)
             {
-                txtMensajePass.Text = "Ingrese una contraseña";
+                //txtMensajePass.Text = "Ingrese una contraseña";
+                Toast.MakeText(Application.Context, "Ingrese una contraseña", ToastLength.Short).Show();
             }
             else if (editRepetirPass.Text == String.Empty)
             {
-                txtMensajeRepetirPass.Text = "Repita nuevamente la contraseña";
+                //txtMensajeRepetirPass.Text = "Repita nuevamente la contraseña";
+                Toast.MakeText(Application.Context, "Repita nuevamente la contraseña", ToastLength.Short).Show();
             }
             else
             {
-                //if (editNombre.Text != string.Empty && editApellido.Text != string.Empty
-                //&& editUsuarioApodo.Text != string.Empty && editTelefono.Text != string.Empty && editCorreo.Text != string.Empty &&
-                //editPass.Text != editRepetirPass.Text )
+                
                 if(editPass.Text != editRepetirPass.Text)
-                {                   
-                    txtMensaje.Text = "Contraseñas no coinciden!";
+                {
+                    //txtMensaje.Text = "Contraseñas no coinciden!";
+                    Toast.MakeText(Application.Context, "Contraseñas no coinciden!", ToastLength.Short).Show();
                 }
                 else
                 {
-                    var res = new Intent(this, typeof(ActivityLogin));
-                    StartActivity(res);
+                    Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
+                    alert.SetTitle("");
+                    alert.SetMessage("Cuenta creada con éxito").SetPositiveButton("Ok", (senderAlert, args) =>
+                    {
+                        ISharedPreferences preferencia = Application.GetSharedPreferences("informacion", FileCreationMode.Private);
+                        ISharedPreferencesEditor editor = preferencia.Edit();
+                        editor.Clear();
+                        editor.Apply();
+                        this.Finish();
+
+                        var res = new Intent(this, typeof(ActivityLogin));
+                        StartActivity(res);
+                    }).SetNegativeButton("", (senderAlert, args) => { }).Show();
+                    
                 }
+
+                DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             }
         }
 

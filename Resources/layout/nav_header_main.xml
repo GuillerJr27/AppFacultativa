@@ -17,7 +17,7 @@
         android:layout_width="99.0dp"
         android:layout_height="92.0dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/hmoney"
+        android:src="@drawable/login"
         android:contentDescription=""/>
 
     <TextView

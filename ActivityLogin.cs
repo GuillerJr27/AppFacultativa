@@ -12,13 +12,13 @@ using System.Text;
 
 namespace AppFacultativa
 {
-    [Activity(Label = "ActivityLogin", MainLauncher = true)]
+    [Activity(Label = "H'MONEY", MainLauncher = true)]
 
     class ActivityLogin : Activity
     {
         Button btnIniciarSesion, btnCrearCuenta;
         EditText editEmail, editPass;
-        TextView txtMensaje, txtMensajeEmail, txtMensajePass;
+        //TextView txtMensaje, txtMensajeEmail, txtMensajePass;
         string Email = "admin@hmoney.com", Pass = "admin123";
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -31,9 +31,9 @@ namespace AppFacultativa
             btnCrearCuenta = FindViewById<Button>(Resource.Id.btnCrearCuenta);
             editEmail = FindViewById<EditText>(Resource.Id.editEmail);
             editPass = FindViewById<EditText>(Resource.Id.editPass);
-            txtMensajeEmail = FindViewById<TextView>(Resource.Id.txtMensajeEmail);
-            txtMensajePass = FindViewById<TextView>(Resource.Id.txtMensajePass);
-            txtMensaje = FindViewById<TextView>(Resource.Id.txtMensaje);
+            //txtMensajeEmail = FindViewById<TextView>(Resource.Id.txtMensajeEmail);
+            //txtMensajePass = FindViewById<TextView>(Resource.Id.txtMensajePass);
+            //txtMensaje = FindViewById<TextView>(Resource.Id.txtMensaje);
             btnIniciarSesion.Click += BtnIniciarSesion_Click;
             btnCrearCuenta.Click += BtnCrearCuenta_Click;
 
@@ -49,11 +49,13 @@ namespace AppFacultativa
         {
             if (editEmail.Text == String.Empty)
             {
-                txtMensajeEmail.Text = "Ingrese una dirección de correo";
+                //txtMensajeEmail.Text = "Ingrese una dirección de correo";
+                Toast.MakeText(Application.Context, "Ingrese una dirección de correo electrónico", ToastLength.Short).Show();
             }
             else if (editPass.Text == String.Empty)
             {
-                txtMensajePass.Text = "Ingrese una contraseña";
+                //txtMensajePass.Text = "Ingrese una contraseña";
+                Toast.MakeText(Application.Context, "Ingrese una contraseña", ToastLength.Short).Show();
             }
             else
             {
@@ -61,10 +63,12 @@ namespace AppFacultativa
                 {
                     var res = new Intent(this, typeof(MainActivity));
                     StartActivity(res);
+                    this.Finish();
                 }
                 else
                 {
-                    txtMensaje.Text = "Email o Contraseña incorrecta";
+                    //txtMensaje.Text = "Email o Contraseña incorrecta";
+                    Toast.MakeText(Application.Context, "Email o Contraseña incorrecta", ToastLength.Short).Show();
                 }
             }
             //if (editEmail.Text != string.Empty && editPass.Text != string.Empty)
@@ -74,6 +78,7 @@ namespace AppFacultativa
             //}
             //else
             //    txtMensaje.Text = "CAMPOS VACIOS";
+            //Toast.MakeText(Application.Context, "Verifique su conexión a internet", ToastLength.Short).Show();
         }
 
 

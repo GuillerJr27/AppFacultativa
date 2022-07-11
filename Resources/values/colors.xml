@@ -12,6 +12,16 @@
 	<color name="background5">#308446</color>
 	<color name="background6">#ffffff</color>
 	<color name="background7">#51d1f6</color>
+	<color name="background8">#79a870</color>
+	<color name="background9">#4b5664</color>
 	<color name="negro">#000000</color>
 	<color name="blanco">#ffffff</color>
+
+	<!--Paleta de Colores de Tema-->
+	<color name="Predeterminado">#79a870</color>
+	<color name="Celeste">#417cea</color>
+	<color name="Claro">#ffffff</color>
+	<color name="Oscuro">#000000</color>
+	<color name="Rojo">#a16161</color>
+	
 </resources>

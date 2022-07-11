@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="10.0dp"
-    android:background="@color/background4"
+    android:background="@color/background8"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -35,25 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tableLayout1">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tableRow1">
-                <ImageView
-                    android:contentDescription=""
-                    android:layout_width="37.0dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/nombre"
-                    android:id="@+id/imageView1" />
-                <EditText
-                    android:hint="@string/textView4"
-                    android:textColorHint="@android:color/black"
-                    android:textColor="@android:color/black"
-                    android:layout_width="300.0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:id="@+id/editNombre" />
-            </TableRow>
+            
             <TextView
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark"
@@ -61,26 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:id="@+id/txtMensajeNombre" />
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="63.5dp"
-                android:id="@+id/tableRow2">
-                <ImageView
-                    android:layout_width="37.0dp"
-                    android:layout_height="40dp"
-                    android:contentDescription=""
-                    android:src="@drawable/nombre"
-                    android:id="@+id/imageView6" />
-
-                <EditText
-                    android:hint="@string/textView5"
-                    android:textColorHint="@android:color/black"
-                    android:textColor="@android:color/black"
-                    android:layout_width="300.0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:id="@+id/editApellido" />
-            </TableRow>
+            
             <TextView
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark"
@@ -89,27 +52,7 @@
                 android:text=""
                 android:id="@+id/txtMensajeApellido" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="63.5dp"
-                android:id="@+id/tableRow4">
-
-                <ImageView
-                    android:layout_width="37.0dp"
-                    android:layout_height="40dp"
-                    android:contentDescription=""
-                    android:src="@drawable/userid"
-                    android:id="@+id/imageView3" />
-
-                <EditText
-                    android:hint="@string/textView6"
-                    android:textColorHint="@android:color/black"
-                    android:textColor="@android:color/black"
-                    android:layout_width="300.0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:id="@+id/editUsuarioApodo" />
-            </TableRow>
+            
             <TextView
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark"
@@ -118,27 +61,7 @@
                 android:text=""
                 android:id="@+id/txtMensajeUsuarioApodo" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="63.5dp"
-                android:id="@+id/tableRow5">
-
-                <ImageView
-                    android:layout_width="37.0dp"
-                    android:layout_height="40dp"
-                    android:contentDescription=""
-                    android:src="@drawable/telefono"
-                    android:id="@+id/imageView4" />
-
-                <EditText
-                    android:hint="@string/textView7"
-                    android:textColorHint="@android:color/black"
-                    android:textColor="@android:color/black"
-                    android:layout_width="300.0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:id="@+id/editTelefono" />
-            </TableRow>
+            
             <TextView
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark"
@@ -236,7 +159,7 @@
 
             <Button
                 android:layout_gravity="center"
-                android:background="@color/background4"
+                android:background="@color/background8"
                 android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

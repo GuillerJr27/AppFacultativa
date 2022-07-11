@@ -42,11 +42,69 @@
 	<string name="btnGuardarCuenta">Guardar Cuenta</string>
 	<string name="btnCancelar">Cancelar Registro</string>
 
-	<string name="planet_prompt">Elija una Moneda</string>
-	<string-array name="planets_array">
+	<string name="textView20">Elija una moneda</string>
+	
+<!--<string name="letrero">Elija una cuenta</string>
+	<string-array name="arreglo_cuentas">
+		<item>Billetera</item>
+		<item>Tarjeta</item>
+		<item>Cuenta de ahorro</item>
+	</string-array>
+		<string name="textView21">Elija una cuenta</string>-->
+	
+
+<string name="planet_prompt1">Choose a planet</string>
+  <string-array name="TipoCuentas">
+    <item>Elija un tipo de cuenta:</item>
+    <item>Billetera</item>
+    <item>Tarjeta débito</item>
+    <item>Cuenta de Ahorro</item>
+    <item>Tarjeta de Crédito</item>
+  </string-array>
+
+	<string name="planet_prompt">Choose a planet</string>
+	<string-array name="TipoMoneda">
+		<item>Elija una moneda:</item>
 		<item>Córdoba</item>
 		<item>Dólar</item>
 	</string-array>
-		<string name="textView20">Elija una moneda</string>
+
+	<string name="textView22">Elija una Categoria</string>
+	<string name="textView23">Gastos</string>
+	<string name="textView24">Descripción del Gasto</string>
+	<string name="textView25">Ingrese el monto del gasto</string>
+
+	<string name="planet_prompt3">Choose a planet</string>
+	<string-array name="ListaCuentas">
+		<item>Elija una cuenta:</item>
+		<item>Billetera</item>
+		<item>Tarjeta débito</item>
+		<item>Cuenta de Ahorro</item>
+		<item>Tarjeta de Crédito</item>
+	</string-array>
+
+	<string name="btnGuardarGasto">Guardar Gasto</string>
+	<string name="btnGasto">Gastos</string>
+	<string name="btnIngreso">Ingresos</string>
 	
+	
+	<string name="textView26">Ingresos</string>
+	<string name="textView27">Ingrese el monto del ingreso</string>
+	<string name="textView39">Descripcion del Ingreso</string>
+	<string name="btnGuardarIngreso">Guardar Ingreso</string>
+
+
+	<string name="textView28">Seleccione un tema</string>
+	<string name="textView29">Predeterminado</string>
+	<string name="textView30">Celeste</string>
+	<string name="textView31">Claro</string>
+	<string name="textView32">Oscuro</string>
+	<string name="textView33">Rojo</string>
+	
+	<string name="textView34">Elija una opción</string>
+	<string name="textView35">Buscar Movimiento</string>
+	<string name="textView36">Fecha del Registro</string>
+	<string name="textView37">Listado</string>
+	<string name="textView38">Cuentas Registradas</string>
+
 </resources>

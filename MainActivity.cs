@@ -21,7 +21,7 @@ namespace AppFacultativa
         {
             base.OnCreate(savedInstanceState);
             if (string.IsNullOrEmpty(UserInfo.Nombre))
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+                Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -41,7 +41,7 @@ namespace AppFacultativa
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            if(drawer.IsDrawerOpen(GravityCompat.Start))
+            if (drawer.IsDrawerOpen(GravityCompat.Start))
             {
                 drawer.CloseDrawer(GravityCompat.Start);
             }
@@ -68,12 +68,12 @@ namespace AppFacultativa
             return base.OnOptionsItemSelected(item);
         }
 
-        private void FabOnClick(object sender, EventArgs eventArgs)
-        {
-            View view = (View)sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        }
+        //private void FabOnClick(object sender, EventArgs eventArgs)
+        //{
+        //    View view = (View)sender;
+        //    Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
+        //        .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+        //}
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
@@ -83,11 +83,17 @@ namespace AppFacultativa
             {
                 var res = new Intent(this, typeof(ActivityCuenta));
                 StartActivity(res);
-                
+
             }
             else if (id == Resource.Id.nav_categorias)
             {
-
+                var res = new Intent(this, typeof(ActivityCategorias));
+                StartActivity(res);
+            }
+            else if (id == Resource.Id.nav_estado)
+            {
+                var res = new Intent(this, typeof(ActivityEstado));
+                StartActivity(res);
             }
             else if (id == Resource.Id.nav_share)
             {
@@ -100,19 +106,29 @@ namespace AppFacultativa
             }
             else if (id == Resource.Id.nav_tema)
             {
-
+                var res = new Intent(this, typeof(ActivityTema));
+                StartActivity(res);
             }
+
             else if (id == Resource.Id.nav_notificaciones)
             {
 
             }
             else if (id == Resource.Id.nav_cerrarsesion)
             {
-                var res = new Intent(this, typeof(ActivityLogin));
-                StartActivity(res);
-            }
-            else if (id == Resource.Id.nav_estado)
-            {
+                Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
+                alert.SetTitle("Cerrar sesión");
+                alert.SetMessage("¿Desea cerrar sesión?").SetPositiveButton("Sí", (senderAlert, args) =>
+                {
+                    ISharedPreferences preferencia = Application.GetSharedPreferences("informacion", FileCreationMode.Private);
+                    ISharedPreferencesEditor editor = preferencia.Edit();
+                    editor.Clear();
+                    editor.Apply();
+                    this.Finish();
+
+                    Intent intent = new Intent(this, typeof(ActivityLogin));
+                    StartActivity(intent);
+                }).SetNegativeButton("No", (senderAlert, args) => { }).Show();
 
             }
 
