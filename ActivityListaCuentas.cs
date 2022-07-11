@@ -14,21 +14,12 @@ namespace AppFacultativa
     [Activity(Label = "ActivityListaCuentas")]
     class ActivityListaCuentas : Activity
     {
-        //List<string> listaCuentas;
-
-        public static readonly string LLAVE_NOMBRE = "Nombre";
-        public static readonly string LLAVE_MONTO = "Monto";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ListaCuentas);
 
-            var editNombreCuenta = FindViewById<EditText>(Resource.Id.editNombreCuenta);
-            var editMonto = FindViewById<EditText>(Resource.Id.editMonto);
-
-            var listaCuentas = new List<string>();
-            var listaMonto = new List<string>();
         }
 
     }

@@ -352,11 +352,6 @@
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_logo_adaptive_fore.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\CategoriasC.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\agregar.xml">
       <SubType>Designer</SubType>
     </AndroidResource>

@@ -92,8 +92,6 @@
             <Button
                 android:text="@string/btnGasto"
                 android:id="@+id/btnGasto"
-                android:background="@color/background8"
-                android:textColor="@android:color/black"
                 android:layout_width="91.5dp"
                 android:layout_height="49.5dp" />
 
@@ -109,8 +107,6 @@
             <Button
                 android:text="@string/btnIngreso"
                 android:id="@+id/btnIngreso"
-                android:background="@color/background8"
-                android:textColor="@android:color/black"
                 android:layout_width="99.0dp"
                 android:layout_height="49.5dp" />
 
