@@ -153,6 +153,15 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:id="@+id/textMensajeMonto" />
+
+            <Button
+                android:background="@color/background4"
+                android:textColor="@android:color/black"
+                android:layout_width="125.5dp"
+                android:layout_height="50.0dp"
+                android:text="@string/btnFecha"
+                android:id="@+id/btnFecha" />
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="50.0dp"
@@ -166,7 +175,7 @@
                     android:id="@+id/imageView4" />
 
                 <EditText
-                    android:hint="@string/textView36"
+                    android:hint=""
                     android:textColorHint="@android:color/black"
                     android:textColor="@android:color/black"
                     android:layout_width="300.0dp"
@@ -212,6 +221,7 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:id="@+id/textView8" />
+            
             <TextView
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark"
@@ -220,7 +230,8 @@
                 android:text=""
                 android:id="@+id/textView9" />
 
-
         </TableLayout>
     </ScrollView>
 </LinearLayout>
+
+

@@ -19,7 +19,7 @@ namespace AppFacultativa
         EditText editNombreCuenta, editMonto, editFecha;
         Spinner spinercuenta, spinermoneda;
         Button btnGuardarCuenta, btnCancelar, btnLista;
-        TextView txtMensajeNombreCuenta, textMensajeMonto, txtMensajeTipoCuenta, txtMensajeTipoMoneda, textMensajeFecha;
+        //TextView txtMensajeNombreCuenta, textMensajeMonto, txtMensajeTipoCuenta, txtMensajeTipoMoneda, textMensajeFecha;
 
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -29,7 +29,7 @@ namespace AppFacultativa
             SetContentView(Resource.Layout.Cuentas);
 
             editNombreCuenta= FindViewById<EditText>(Resource.Id.editNombreCuenta);
-            txtMensajeNombreCuenta = FindViewById<TextView>(Resource.Id.txtMensajeNombreCuenta);
+            //txtMensajeNombreCuenta = FindViewById<TextView>(Resource.Id.txtMensajeNombreCuenta);
 
             spinercuenta = FindViewById<Spinner>(Resource.Id.spinnercuenta);
             spinercuenta.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
@@ -39,7 +39,7 @@ namespace AppFacultativa
             adapter1.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spinercuenta.Adapter = adapter1;
 
-            txtMensajeTipoCuenta = FindViewById<TextView>(Resource.Id.txtMensajeTipoCuenta);
+            //txtMensajeTipoCuenta = FindViewById<TextView>(Resource.Id.txtMensajeTipoCuenta);
             ///////////////////////////////////////////////////////////////////////////
             spinermoneda = FindViewById<Spinner>(Resource.Id.spinnermoneda);
             spinermoneda.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
@@ -49,13 +49,13 @@ namespace AppFacultativa
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spinermoneda.Adapter = adapter;
 
-            txtMensajeTipoMoneda = FindViewById<TextView>(Resource.Id.txtMensajeTipoMoneda);
+            //txtMensajeTipoMoneda = FindViewById<TextView>(Resource.Id.txtMensajeTipoMoneda);
             /////////////////////////////////////////////////////////
             editMonto = FindViewById<EditText>(Resource.Id.editMonto);
-            textMensajeMonto = FindViewById<TextView>(Resource.Id.textMensajeMonto);
+            //textMensajeMonto = FindViewById<TextView>(Resource.Id.textMensajeMonto);
 
             editFecha = FindViewById<EditText>(Resource.Id.editFecha);
-            textMensajeFecha = FindViewById<TextView>(Resource.Id.textMensajeFecha);
+            //textMensajeFecha = FindViewById<TextView>(Resource.Id.textMensajeFecha);
 
             btnGuardarCuenta = FindViewById<Button>(Resource.Id.btnGuardarCuenta);
             btnGuardarCuenta.Click += BtnGuardarCuenta_Click1;

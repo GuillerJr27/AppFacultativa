@@ -25,12 +25,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="19.5dp"
+        android:id="@+id/textView4" />
 
     <SearchView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/background10"
+        android:contextClickable="@android:color/white"
         android:id="@+id/searchView1" />
     <ListView
         android:minWidth="25px"

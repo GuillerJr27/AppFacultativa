@@ -105,26 +105,6 @@
                 android:text=""
                 android:id="@+id/txtMensajeTipoCuenta" />
 
-            <!--<TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="63.5dp"
-                android:id="@+id/tableRow4">
-
-                <ImageView
-                    android:layout_width="37.0dp"
-                    android:layout_height="40dp"
-                    android:contentDescription=""
-                    android:src="@drawable/moneda"
-                    android:id="@+id/imageView3" />
-                <Spinner
-                    android:id="@+id/spinnermoneda"
-                    android:text="@string/textView20"
-                    android:layout_width="fill_parent"
-                    android:layout_height="45.0dp"
-                    android:prompt="@string/planet_prompt"/>
-
-            </TableRow>-->
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="50.0dp"
@@ -153,6 +133,15 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:id="@+id/textMensajeMonto" />
+
+            <Button
+                android:background="@color/background4"
+                android:textColor="@android:color/black"
+                android:layout_width="125.5dp"
+                android:layout_height="50.0dp"
+                android:text="@string/btnFecha"
+                android:id="@+id/btnFecha" />
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="50.0dp"
@@ -166,7 +155,7 @@
                     android:id="@+id/imageView4" />
 
                 <EditText
-                    android:hint="@string/textView36"
+                    android:hint=""
                     android:textColorHint="@android:color/black"
                     android:textColor="@android:color/black"
                     android:layout_width="300.0dp"

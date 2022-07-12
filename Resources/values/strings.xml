@@ -106,5 +106,8 @@
 	<string name="textView36">Fecha del Registro</string>
 	<string name="textView37">Listado</string>
 	<string name="textView38">Cuentas Registradas</string>
+	
+	<string name="textView40">Bienvenido!</string>
+	<string name="btnFecha">Fecha Registro</string>
 
 </resources>
