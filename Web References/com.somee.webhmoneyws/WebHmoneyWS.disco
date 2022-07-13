@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://webhmoneyws.somee.com/WebHmoneyWS/WebHmoneyWS.asmx?wsdl" docRef="http://webhmoneyws.somee.com/WebHmoneyWS/WebHmoneyWS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://webhmoneyws.somee.com/WebHmoneyWS/WebHmoneyWS.asmx" xmlns:q1="http://tempuri.org/" binding="q1:WebHmoneyWSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://webhmoneyws.somee.com/WebHmoneyWS/WebHmoneyWS.asmx" xmlns:q2="http://tempuri.org/" binding="q2:WebHmoneyWSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

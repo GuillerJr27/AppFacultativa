@@ -83,13 +83,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserInfo.cs" />
-    <Compile Include="Web References\MovimientosCuenta\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-    <Compile Include="Web References\UsuariosExtra\Reference.cs">
+    <Compile Include="Web References\com.somee.webhmoneyws\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -99,22 +93,23 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <None Include="Web References\MovimientosCuenta\CuentaUsuario.datasource">
+    <None Include="Web References\com.somee.webhmoneyws\CuentasWS.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\MovimientosCuenta\MovimientoCuenta.wsdl" />
-    <None Include="Web References\MovimientosCuenta\Reference.map">
+    <None Include="Web References\com.somee.webhmoneyws\MovimientoWS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.somee.webhmoneyws\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\UsuariosExtra\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\UsuariosExtra\UsuarioExtraInfo.datasource">
+    <None Include="Web References\com.somee.webhmoneyws\ResultadoSW.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\UsuariosExtra\UsuariosExtra.wsdl" />
+    <None Include="Web References\com.somee.webhmoneyws\TipoGastoWS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.somee.webhmoneyws\WebHmoneyWS.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_main.xml">
@@ -169,40 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="https://localhost:44354/Servicios/MovimientoCuenta.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\MovimientosCuenta\</RelPath>
-      <UpdateFromURL>https://localhost:44354/Servicios/MovimientoCuenta.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>
-      </CachedAppSettingsObjectName>
-      <CachedSettingsPropName>
-      </CachedSettingsPropName>
-    </WebReferenceUrl>
-    <WebReferenceUrl Include="https://localhost:44354/Servicios/UsuariosExtra.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\UsuariosExtra\</RelPath>
-      <UpdateFromURL>https://localhost:44354/Servicios/UsuariosExtra.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>
-      </CachedAppSettingsObjectName>
-      <CachedSettingsPropName>
-      </CachedSettingsPropName>
-    </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web References\MovimientosCuenta\MovimientoCuenta.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web References\UsuariosExtra\UsuariosExtra.disco" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\cuenta.png" />
@@ -350,6 +311,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_logo_adaptive_fore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://webhmoneyws.somee.com/WebHmoneyWS/WebHmoneyWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.somee.webhmoneyws\</RelPath>
+      <UpdateFromURL>http://webhmoneyws.somee.com/WebHmoneyWS/WebHmoneyWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\com.somee.webhmoneyws\WebHmoneyWS.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

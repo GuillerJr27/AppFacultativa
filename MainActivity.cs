@@ -20,8 +20,8 @@ namespace AppFacultativa
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            if (string.IsNullOrEmpty(UserInfo.Nombre))
-                Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            //if (string.IsNullOrEmpty(UserInfo.Nombre))
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
